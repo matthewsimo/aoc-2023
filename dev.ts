@@ -2,8 +2,9 @@ import chalk from "chalk";
 const concurrently = require("concurrently");
 
 const day = process.argv.at(-1);
-
 if (!day) throw "Include a day";
+
+console.log(`Running day ${day}`);
 
 concurrently([
   {

@@ -1,7 +1,7 @@
 const day = process.argv.at(-1);
-console.log(`Creating files for day ${day}`);
 
 if (!day) throw "Include a day";
+console.log(`Creating files for day ${day}`);
 
 const sourceFile = Bun.file(".init/index.ts");
 const sourceMain = Bun.file(".init/main.ts");

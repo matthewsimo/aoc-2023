@@ -11,7 +11,7 @@
     "typescript": "^5.0.0"
   },
   "scripts": {
-    "init": "bun init.ts",
-    "dev": "bun dev.ts"
+    "init": "bun init.ts $(date \"+%d\")",
+    "dev": "bun dev.ts $(date \"+%d\")"
   }
 }
