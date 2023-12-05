@@ -1,10 +1,6 @@
 const extractNumbers = (s: string) => s.split(" ").map((n) => Number(n));
 
 const findMapping = (x: number, mappings: number[][]) => {
-  // Is x in n2 - n2+o?
-  //    - return n1 + (x - n2)
-  // else
-  //    - return x
   let mappedNum = x;
 
   for (const mapping of mappings) {
@@ -36,7 +32,6 @@ export const p1 = (input: string) => {
     return mappings.at(-1) as number;
   });
 
-  // console.log({ seeds, locations, maps });
   return Math.min(...locations);
 };
 
@@ -54,8 +49,6 @@ export const p2 = (input: string) => {
     return mapNums.map((line) => extractNumbers(line));
   });
 
-  // console.log({ seeds, maps });
-
   for (let mapGroup of maps) {
     let nextSet: number[][] = [];
     while (seeds.length > 0) {
@@ -65,7 +58,6 @@ export const p2 = (input: string) => {
       inner: for (let [n1, n2, o] of mapGroup) {
         const mS = Math.max(seedStart, n2);
         const mE = Math.min(seedEnd, n2 + o);
-        // console.log({ mS, mE, n1, n2, o, seedStart, seedEnd });
         if (mS < mE) {
           nextSet.push([mS - n2 + n1, mE - n2 + n1]);
           if (mS > seedStart) {
