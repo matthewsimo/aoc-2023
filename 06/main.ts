@@ -1,5 +1,5 @@
 import { p1, p2 } from "./index";
-import input from "../_input/05.txt";
+import input from "../_input/06.txt";
 import { report } from "../utils/perf";
 
 report(

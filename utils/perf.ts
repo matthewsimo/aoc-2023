@@ -5,7 +5,7 @@ export const time = (fn: () => any) => {
   const s = performance.now();
   const a = fn();
   const e = performance.now();
-  return [a, e - s];
+  return [a, (e - s).toFixed(4)];
 };
 
 export const report = (fn1: () => any, fn2: () => any) => {
