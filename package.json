@@ -12,6 +12,7 @@
     "typescript": "^5.0.0"
   },
   "scripts": {
+    "start": "bun run init && bun dev",
     "init": "bun init.ts",
     "dev": "bun dev.ts"
   }
