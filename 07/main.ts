@@ -1,8 +1,6 @@
+import { run } from "../utils";
 import { p1, p2 } from "./index";
 import input from "../_input/07.txt";
-import { report } from "../utils";
+import { testp1, testp2 } from "./index.test";
 
-report(
-  () => p1(input),
-  () => p2(input)
-);
+run([testp1, () => p1(input)], [testp2, () => p2(input)]);

@@ -1,15 +1,12 @@
-import { expect, test } from "bun:test";
 import { p1, p2 } from "./index";
+import { assert } from "../utils";
 
-const input = `32T3K 765
+const i1 = `32T3K 765
 T55J5 684
 KK677 28
 KTJJT 220
 QQQJA 483`;
-test("p1", () => {
-  expect(p1(input)).toBe(6440);
-});
+export const testp1 = assert(p1(i1), 6440);
 
-test("p2", () => {
-  expect(p2(input)).toBe(5905);
-});
+const i2 = i1;
+export const testp2 = assert(p2(i2), 5905);
