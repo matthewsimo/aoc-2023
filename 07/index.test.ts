@@ -1,5 +1,5 @@
-import { p1, p2 } from "./index";
 import { assert } from "../utils";
+import { p1, p2 } from "./index";
 
 const i1 = `32T3K 765
 T55J5 684

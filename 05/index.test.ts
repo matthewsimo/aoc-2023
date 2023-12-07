@@ -1,7 +1,7 @@
-import { expect, test } from "bun:test";
+import { assert } from "../utils";
 import { p1, p2 } from "./index";
 
-const input = `seeds: 79 14 55 13
+const i1 = `seeds: 79 14 55 13
 
 seed-to-soil map:
 50 98 2
@@ -34,10 +34,7 @@ temperature-to-humidity map:
 humidity-to-location map:
 60 56 37
 56 93 4`;
-test("p1", () => {
-  expect(p1(input)).toBe(35);
-});
+export const testp1 = assert(p1(i1), 35);
 
-test("p2", () => {
-  expect(p2(input)).toBe(46);
-});
+const i2 = i1;
+export const testp2 = assert(p2(i2), 46);

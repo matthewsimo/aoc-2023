@@ -1,5 +1,5 @@
-import { p1, p2 } from "./index";
 import { assert } from "../utils";
+import { p1, p2 } from "./index";
 
 const i1 = ``;
 export const testp1 = assert(p1(i1), 1);

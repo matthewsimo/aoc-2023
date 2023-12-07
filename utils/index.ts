@@ -40,25 +40,6 @@ export const run = (
   ]);
 };
 
-export const report = (fn1: () => any, fn2: () => any) => {
-  const [a1, dur1] = time(() => fn1());
-  const [a2, dur2] = time(() => fn2());
-  console.log();
-  printTable([
-    {
-      run: chalk.bold.bgMagenta(" p1 "),
-      answer: a1,
-      duration: chalk.dim(`[${dur1}ms]`),
-    },
-
-    {
-      run: chalk.bold.bgGreen(" p2 "),
-      answer: a2,
-      duration: chalk.dim(`[${dur2}ms]`),
-    },
-  ]);
-};
-
 export const debug = (output: any) => {
   Bun.write("./__debug.json", JSON.stringify(output, null, 2));
 };
