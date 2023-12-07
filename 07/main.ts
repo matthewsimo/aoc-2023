@@ -1,6 +1,6 @@
 import { p1, p2 } from "./index";
 import input from "../_input/07.txt";
-import { report } from "../utils/perf";
+import { report } from "../utils";
 
 report(
   () => p1(input),

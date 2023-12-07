@@ -26,3 +26,7 @@ export const report = (fn1: () => any, fn2: () => any) => {
     },
   ]);
 };
+
+export const debug = (output: any) => {
+  Bun.write("./__debug.json", JSON.stringify(output, null, 2));
+};
