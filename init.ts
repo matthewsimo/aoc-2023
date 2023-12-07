@@ -1,6 +1,15 @@
-const day = process.argv.at(-1);
+let day;
+if (process.argv.length === 2) {
+  const p = Bun.spawnSync(["date", `+%d`]);
+  if (p.success) {
+    day = p.stdout.toString().trim();
+  }
+} else {
+  day = process.argv.at(2);
+}
 
-if (!day) throw "Include a day";
+if (!day) throw "No day";
+
 console.log(`Creating files for day ${day}`);
 
 const sourceFile = Bun.file(".init/index.ts");
