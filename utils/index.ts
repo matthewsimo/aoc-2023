@@ -43,3 +43,11 @@ export const run = (
 export const debug = (output: any) => {
   Bun.write("./__debug.json", JSON.stringify(output, null, 2));
 };
+
+export const gcd = function (a: number, b: number): number {
+  if (!b) {
+    return a;
+  }
+
+  return gcd(b, a % b);
+};
